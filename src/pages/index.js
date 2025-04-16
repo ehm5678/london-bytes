@@ -97,14 +97,14 @@ export default function Home() {
   );
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div class="bg-gray-100 min-h-screen">
       <Navbar
         selectedCuisine={selectedCuisine}
         setSelectedCuisine={setSelectedCuisine}
         selectedTag={selectedTag}
         setSelectedTag={setSelectedTag}
       />
-      <div className="p-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="p-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredReviews.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />
         ))}

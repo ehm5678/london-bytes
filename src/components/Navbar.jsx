@@ -2,11 +2,11 @@ import React from "react";
 
 const Navbar = ({ selectedCuisine, setSelectedCuisine, selectedTag, setSelectedTag }) => {
   return (
-    <nav className="bg-gray-900 text-white p-4 flex flex-col md:flex-row gap-4 items-center">
-      <h1 className="text-xl font-bold">London Bytes</h1>
+    <nav class="bg-gray-900 text-white p-4 flex flex-col md:flex-row gap-4 items-center font-sans">
+      <h1 class="text-xl font-bold">London Bytes</h1>
 
       <select
-        className="p-2 bg-gray-800 border border-gray-600 rounded"
+        class="p-2 bg-gray-800 border border-pink-600 rounded"
         value={selectedCuisine}
         onChange={(e) => setSelectedCuisine(e.target.value)}
       >
@@ -22,7 +22,7 @@ const Navbar = ({ selectedCuisine, setSelectedCuisine, selectedTag, setSelectedT
       </select>
 
       <select
-        className="p-2 bg-gray-800 border border-gray-600 rounded"
+        class="p-2 bg-gray-800 border border-gray-600 rounded"
         value={selectedTag}
         onChange={(e) => setSelectedTag(e.target.value)}
       >
