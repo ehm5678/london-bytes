@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import RestaurantCard from "@/components/RestaurantCard";
+import Title from "@/components/Title"
 
 const reviews = [
   {
@@ -97,18 +98,22 @@ export default function Home() {
   );
 
   return (
-    <div class="bg-gray-100 min-h-screen">
-      <Navbar
-        selectedCuisine={selectedCuisine}
-        setSelectedCuisine={setSelectedCuisine}
-        selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}
-      />
-      <div class="p-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredReviews.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-        ))}
+    <div class="bg-green min-h-screen">
+      <Title />  
+      
+      <div class="bg-gray-100 min-h-screen">
+        <Navbar
+          selectedCuisine={selectedCuisine}
+          setSelectedCuisine={setSelectedCuisine}
+          selectedTag={selectedTag}
+          setSelectedTag={setSelectedTag}
+        />
+        <div class="bg-green-400 p-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {filteredReviews.map((restaurant) => (
+            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+          ))}
+        </div>
       </div>
-    </div>
+    </div>  
   );
 }
